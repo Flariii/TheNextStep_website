@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheNextStep</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Хедер -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- Логотип -->
+        <a class="navbar-brand" href="#">TheNextStep</a>
+
+        <!-- Кнопка для мобільного меню -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Навігаційні посилання -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#top">Головна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#card">Кафе</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#map">Карта</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Контакти</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="card" class="container mt-5">
+    <div id="cardCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Слайд 1 -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- Перша картка -->
+                    <div class="col-md-4 d-flex mb-3">
+                        <div class="card w-100">
+                            <img src="images/i.jpg" class="card-img-top" alt="Impero Cafe">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A modern forest cottage with a sharp roof and panoramic windows, offering stunning views of the surrounding nature.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a   class="price" href="#map" onclick="focusOnMarker('marker1')">Перейти до карти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Друга картка -->
+                    <div class="col-md-4 d-flex mb-3">
+                        <div class="card w-100">
+                            <img src="images/1.jpg" class="card-img-top" alt="Mountain House">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A cozy mountain house with breathtaking views, perfect for a peaceful escape from the busy city life.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <a class="price" href="#map" onclick="focusOnMarker('marker2')">Перейти до карти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Третя картка -->
+                    <div class="col-md-4 d-flex mb-3">
+                        <div class="card w-100">
+                            <img src="images/1.jpg" class="card-img-top" alt="Beach Villa">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A luxurious beach villa with private access to the ocean and stunning sunset views.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="price">2.000$</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Четверта картка -->
+                    <div class="col-md-4 d-flex mb-3">
+                        <div class="card w-100">
+                            <img src="images/1.jpg" class="card-img-top" alt="Lake House">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A beautiful lake house surrounded by nature, perfect for a relaxing getaway.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="price">1.200$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- П'ята картка -->
+                    <div class="col-md-4 d-flex mb-3">
+                        <div class="card w-100">
+                            <img src="images/1.jpg" class="card-img-top" alt="City Apartment">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A stylish city apartment located in the heart of the urban area, with modern amenities.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="price">1.800$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Шоста картка -->
+                    <div class="col-md-4 d-flex mb-3">
+                        <div class="card w-100">
+                            <img src="images/1.jpg" class="card-img-top" alt="Country Villa">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A charming country villa surrounded by lush landscapes and fresh air.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="price">2.300$</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Кнопки для навігації -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Картки для малих екранів -->
+    <div class="row d-md-none">
+        <!-- Перша картка -->
+        <div class="col-12 d-flex mb-3">
+            <div class="card w-100">
+                <img src="images/1.jpg" class="card-img-top" alt="Forest Cottage">
+                <div class="card-body">
+                    <p class="card-text">
+                        A modern forest cottage with a sharp roof and panoramic windows, offering stunning views of the surrounding nature.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="price">1.000$</p>
+                </div>
+            </div>
+        </div>
+        <!-- Друга картка -->
+        <div class="col-12 d-flex mb-3">
+            <div class="card w-100">
+                <img src="images/1.jpg" class="card-img-top" alt="Mountain House">
+                <div class="card-body">
+                    <p class="card-text">
+                        A cozy mountain house with breathtaking views, perfect for a peaceful escape from the busy city life.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="price">1.500$</p>
+                </div>
+            </div>
+        </div>
+        <!-- Третя картка -->
+        <div class="col-12 d-flex mb-3">
+            <div class="card w-100">
+                <img src="images/1.jpg" class="card-img-top" alt="Beach Villa">
+                <div class="card-body">
+                    <p class="card-text">
+                        A luxurious beach villa with private access to the ocean and stunning sunset views.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="price">2.000$</p>
+                </div>
+            </div>
+        </div>
+        <!-- Четверта картка -->
+        <div class="col-12 d-flex mb-3">
+            <div class="card w-100">
+                <img src="images/1.jpg" class="card-img-top" alt="Lake House">
+                <div class="card-body">
+                    <p class="card-text">
+                        A beautiful lake house surrounded by nature, perfect for a relaxing getaway.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="price">1.200$</p>
+                </div>
+            </div>
+        </div>
+        <!-- П'ята картка -->
+        <div class="col-12 d-flex mb-3">
+            <div class="card w-100">
+                <img src="images/1.jpg" class="card-img-top" alt="City Apartment">
+                <div class="card-body">
+                    <p class="card-text">
+                        A stylish city apartment located in the heart of the urban area, with modern amenities.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="price">1.800$</p>
+                </div>
+            </div>
+        </div>
+        <!-- Шоста картка -->
+        <div class="col-12 d-flex mb-3">
+            <div class="card w-100">
+                <img src="images/1.jpg" class="card-img-top" alt="Country Villa">
+                <div class="card-body">
+                    <p class="card-text">
+                        A charming country villa surrounded by lush landscapes and fresh air.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p class="price">2.300$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div id="map"></div>
+</div>
+    <!-- Футер на всю ширину -->
+<footer class="bg-dark text-light text-center py-4 mt-5 w-100">
+    <div class="container">
+        <div class="row">
+            <!-- Інформація про компанію -->
+            <div class="col-md-6 mb-3 mb-md-0">
+                <h5>TheNextStep</h5>
+                <p>&copy; 2024 Всі права захищено.</p>
+            </div>
+            <!-- Соціальні мережі -->
+            <div class="col-md-6">
+                <h5>Слідкуйте за нами</h5>
+                <a href="https://www.facebook.com" class="text-light me-3">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com" class="text-light me-3">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://www.twitter.com" class="text-light">
+                    <i class="bi bi-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
