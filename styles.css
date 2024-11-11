@@ -2,6 +2,11 @@ body {
     padding-top: 30px; /* Налаштуйте значення відповідно до висоти навбара */
 }
 
+.logo {
+    height: 5px;
+    width: 12px;
+    filter: brightness(0.65);
+}
 
 
 /* Стиль для мапи */
@@ -49,7 +54,7 @@ text-align: center;
 }
 .card-img-top {
     width: 100%; /* Зробити зображення на всю ширину контейнера */
-    height: 500px; /* Фіксована висота для всіх зображень */
+    height: 350px; /* Фіксована висота для всіх зображень */
     object-fit: cover; /* Обрізати зображення, щоб відповідало заданим розмірам */
 }
 .cafe:hover {
@@ -78,20 +83,6 @@ text-align: center;
      display: flex;
      flex-direction: column; /* Відображати картки вертикально */
  }
-}
-footer {
-    padding: 20px 0;
-    background-color: #1d1d1d;
-    color: #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer a {
-    color: #bbb;
-    text-decoration: none;
-    transition: color 0.3s;
 }
 
 
