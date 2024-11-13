@@ -2,14 +2,14 @@ async function loadPosts() {
     const urlParams = new URLSearchParams(window.location.search);
     const type = urlParams.get('type');
 
-    // if (!type) {
-    //     console.log('No type specified in the URL');
-    //     alert('No type specified in the URL');
-    //     return;
-    // }
+    if (!type) {
+        console.log('No type specified in the URL');
+        alert('No type specified in the URL');
+        return;
+    }
 
     try {
-        const response = await fetch(`http://localhost:5000/posts/cafe`);  // ${type}
+        const response = await fetch(`http://localhost:5000/posts/${type}`); 
         const posts = await response.json();  // Перетворюємо відповідь на JSON
 
         const container = document.getElementById('places-container');
@@ -25,7 +25,7 @@ async function loadPosts() {
 
             card.innerHTML = `
                 <div class="card">
-                    <img src="${post.picture}" class="card-img-top" alt="${post.name}">
+                    <img src="${post.photo_url}" class="card-img-top" alt="${post.name}">
                     <div class="card-body">
                         <h4 class="card-title fw-bold">${post.name}</h4>
                         <p class="card-text">Address: ${post.address}</p>

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const spaSchema = new mongoose.Schema({
+    photo_url: String,
     name: String, 
     address: String,
     rating: Number,
