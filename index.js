@@ -28,19 +28,19 @@ app.get('/posts/:type', async (req, res) => {
     let Model;
 
     switch (type) {
-        case 'cafe': {
+        case 'Cafe': {
             Model = Cafe;
             break;
         }
-        case 'gym': {
+        case 'Gym': {
             Model = Gym;
             break;
         }
-        case 'park': {
+        case 'Park': {
             Model = Park;
             break;
         }
-        case 'spa': {
+        case 'Spa': {
             Model = Spa;
             break;
         }
