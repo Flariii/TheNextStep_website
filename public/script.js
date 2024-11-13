@@ -27,11 +27,10 @@ async function loadPosts() {
                 <div class="card">
                     <img src="${post.picture}" class="card-img-top" alt="${post.name}">
                     <div class="card-body">
-                        <h5 class="card-title">${post.name}</h5>
+                        <h4 class="card-title fw-bold">${post.name}</h4>
                         <p class="card-text">Address: ${post.address}</p>
                         <p class="card-text">Rating: ${post.rating}</p>
-                        <!-- <p class="card-text">${locationText}</p> <p class="card-text">Place ID: ${post.place_id}</p> -->
-                        <a class="btn btn-success mt-2" href="#map">Go to map</a>
+                        <a class="btn btn-success mt-2 px-4 py-2" href="#map">Go to map</a>
                     </div>
                 </div>
             `;
