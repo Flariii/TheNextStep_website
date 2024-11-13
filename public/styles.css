@@ -31,8 +31,7 @@
     border-bottom: 2px solid #27935db3;
 }
 
-.card {
-    height: 100%;
+.places-container {
     display: flex;
     flex-direction: column;
 }
