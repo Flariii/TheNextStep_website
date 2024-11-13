@@ -5,11 +5,17 @@
     font-family: Arial;
 }
 
+/* disable vertical scroll */
+body, html {
+    overflow-x: hidden;
+}
+
 .header-navbar {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .header-navbar .navbar {
+    height: 100px;
     background-color: #201f1f; 
     color: #e3e3e3;
 }
@@ -32,7 +38,7 @@
 }
 
 .main {
-    min-height: 70vh;
+    min-height: 80vh;
 }
 
 .places-container {
