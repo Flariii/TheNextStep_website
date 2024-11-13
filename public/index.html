@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheNextStep</title>
+    <link rel="icon" type="image/x-icon" href="images/green_logo.png" class="logo">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+            <div class="container">
+                <!-- Логотип -->
+                <span class="navbar-brand  d-flex align-items-center">
+                    <img src="images/logo.png" alt="Логотип" width="60"  class="d-inline-block align-text-top me-2">
+                    TheNextStep</span>
+    
+                <!-- Кнопка для мобільного меню -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Навігаційні посилання -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#card">Кафе</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#map">Карта</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <div id="card" class="container mt-5">
+            <div id="cardCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Слайд 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Перша картка -->
+                            <div class="col-md-4 d-flex mb-3">
+                                <div class="card w-100 ">
+                                    <img src="images/i.jpg" class="card-img-top" alt="Impero Cafe">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Impero Cafe</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 9:00 - 21:00, Сб-Нд: 10:00 - 21:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Це кафе - прихована Львівська перлинка!"</p> 
+                                    </div>
+                                    <div class="card-footer">
+                                        <a   class="cafe" href="#map" onclick="focusOnMarker('marker1')">Перейти до карти</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Друга картка -->
+                            <div class="col-md-4 d-flex mb-3">
+                                <div class="card w-100">
+                                    <img src="images/m.jpg" class="card-img-top" alt="Mokka 1554">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Mokka 1554</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 9:00 - 21:00, Сб-Нд: 09:00 - 21:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Чудове місце для відпочинку з сім'єю!"</p> 
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="cafe" href="#map" onclick="focusOnMarker('marker2')">Перейти до карти</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Третя картка -->
+                            <div class="col-md-4 d-flex mb-3">
+                                <div class="card w-100">
+                                    <img src="images/l.jpg" class="card-img-top" alt="Lviv coffee mine">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Львівська копальня кави</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 8:00 - 23:00, Сб-Нд: 08:00 - 23:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Дуже атмосферний заклад."</p> 
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="cafe" href="#map" onclick="focusOnMarker('marker3')">Перейти до карти</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Слайд 2 -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- Четверта картка -->
+                            <div class="col-md-4 d-flex mb-3">
+                                <div class="card w-100">
+                                    <img src="images/c.jpg" class="card-img-top" alt="Cat Cafe">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cat Cafe</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 9:00 - 23:00, Сб-Нд: 09:00 - 23:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Супер класне місце для тих хто любить котиків."</p> 
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="cafe" href="#map" onclick="focusOnMarker('marker4')">Перейти до карти</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- П'ята картка -->
+                            <div class="col-md-4 d-flex mb-3">
+                                <div class="card w-100">
+                                    <img src="images/t.jpg" class="card-img-top" alt="Tante Sophie Càfe Escargotity Apartment">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tante Sophie Càfe Escargot</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 10:00 - 22:00, Сб-Нд: 10:00 - 22:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Місце чудове, дуже смачна їжа."</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="cafe" href="#map" onclick="focusOnMarker('marker5')">Перейти до карти</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Шоста картка -->
+                            <div class="col-md-4 d-flex mb-3">
+                                <div class="card w-100">
+                                    <img src="images/n.jpg" class="card-img-top" alt="На бамбетлі">
+                                    <div class="card-body">
+                                        <h5 class="card-title">На бамбетлі</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 10:00 - 22:00, Сб-Нд: 10:00 - 22:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Місце чудове, дуже смачна їжа."</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a class="cafe" href="#map" onclick="focusOnMarker('marker6')">Перейти до карти</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопки для навігації -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    
+            <!-- Картки для малих екранів -->
+            <div class="row d-md-none">
+                <!-- Перша картка -->
+                <div class="col-12 d-flex mb-3">
+                    <div class="card w-100">
+                        <img src="images/i.jpg" class="card-img-top" alt="Impero Cafe">
+                        <div class="card-body">
+                            <h5 class="card-title">Impero Cafe</h5>
+                            <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 9:00 - 21:00, Сб-Нд: 10:00 - 21:00</p> <!-- Робочі години -->
+                            <p class="card-text"><strong>Відгук:</strong> "Це кафе - прихована Львівська перлинка!"</p> 
+                        </div>
+                        <div class="card-footer">
+                            <a   class="cafe" href="#map" onclick="focusOnMarker('marker1')">Перейти до карти</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Друга картка -->
+                <div class="col-12 d-flex mb-3">
+                    <div class="card w-100">
+                        <img src="images/m.jpg" class="card-img-top" alt="Mokka 1554">
+                        <div class="card-body">
+                            <h5 class="card-title">Mokka 1554</h5>
+                            <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 9:00 - 21:00, Сб-Нд: 09:00 - 21:00</p> <!-- Робочі години -->
+                            <p class="card-text"><strong>Відгук:</strong> "Чудове місце для відпочинку з сім'єю!"</p> 
+                        </div>
+                        <div class="card-footer">
+                            <a class="cafe" href="#map" onclick="focusOnMarker('marker2')">Перейти до карти</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Третя картка -->
+                <div class="col-12 d-flex mb-3">
+                    <div class="card w-100">
+                        <img src="images/l.jpg" class="card-img-top" alt="Lviv coffee mine">
+                        <div class="card-body">
+                            <h5 class="card-title">Львівська копальня кави</h5>
+                            <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 8:00 - 23:00, Сб-Нд: 08:00 - 23:00</p> <!-- Робочі години -->
+                            <p class="card-text"><strong>Відгук:</strong> "Дуже атмосферний заклад."</p> 
+                        </div>
+                        <div class="card-footer">
+                            <a class="cafe" href="#map" onclick="focusOnMarker('marker3')">Перейти до карти</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Четверта картка -->
+                <div class="col-12 d-flex mb-3">
+                    <div class="card w-100">
+                        <img src="images/c.jpg" class="card-img-top" alt="Cat Cafe">
+                        <div class="card-body">
+                            <h5 class="card-title">Cat Cafe</h5>
+                                        <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 9:00 - 23:00, Сб-Нд: 09:00 - 23:00</p> <!-- Робочі години -->
+                                        <p class="card-text"><strong>Відгук:</strong> "Супер класне місце для тих хто любить котиків."</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="cafe" href="#map" onclick="focusOnMarker('marker4')">Перейти до карти</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- П'ята картка -->
+                <div class="col-12 d-flex mb-3">
+                    <div class="card w-100">
+                        <img src="images/t.jpg" class="card-img-top" alt="Tante Sophie Càfe Escargot">
+                        <div class="card-body">
+                            <h5 class="card-title">Tante Sophie Càfe Escargot</h5>
+                            <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 10:00 - 22:00, Сб-Нд: 10:00 - 22:00</p> <!-- Робочі години -->
+                            <p class="card-text"><strong>Відгук:</strong> "Місце чудове, дуже смачна їжа."</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="cafe" href="#map" onclick="focusOnMarker('marker5')">Перейти до карти</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Шоста картка -->
+                <div class="col-12 d-flex mb-3">
+                    <div class="card w-100">
+                        <img src="images/n.jpg" class="card-img-top" alt="На бамбетлі">
+                        <div class="card-body">
+                            <h5 class="card-title">На бамбетлі</h5>
+                            <p class="card-text"><strong>Робочі години:</strong> Пн-Пт: 10:00 - 22:00, Сб-Нд: 10:00 - 22:00</p> <!-- Робочі години -->
+                            <p class="card-text"><strong>Відгук:</strong> "Місце чудове, дуже смачна їжа."</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="cafe" href="#map" onclick="focusOnMarker('marker6')">Перейти до карти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container map-container mt-5">
+            <div id="map"></div>
+        </div>
+
+        <footer id="contact" class="footer" style="background-color: #201f1f; color: #e3e3e3ac; margin-top: 20px;">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-between align-items-center mt-4">
+                    <div class="col-12 col-md-6 fs-5 text-center text-md-end text-capitalize pe-md-1">
+                        <p>&copy; 2024 All rights reserved.</p>
+                    </div>
+                    <div class="col-12 col-md-6 fs-5 text-center text-md-start ps-md-1">
+                        <p>Designed By <span style="color: #39e891b3;">TheNextStep</span></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 fs-6 text-center">
+                            <p>
+                                Follow Us. Stay updated with our latest offers and news:
+                            </p>
+                        </div>
+                        <div class="col-12 fs-6 text-center">
+                            <p>
+                                <a href="#" style="color: #39e891b3;" class="text-decoration-none">Facebook</a>
+                                <span class="mx-2">|</span>
+                                <a href="#" style="color: #39e891b3;" class="text-decoration-none">Instagram</a>
+                                <span class="mx-2">|</span>   
+                                <a href="#" style="color: #39e891b3;" class="text-decoration-none">Twitter</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
