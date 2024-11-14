@@ -9,7 +9,7 @@ async function loadPosts() {
     }
 
     try {
-        const response = await fetch(`http://localhost:5000/posts/${type}`); 
+        const response = await fetch(`https://thenextstep-api-1.onrender.com/posts/${type}`); 
         const posts = await response.json();  // Перетворюємо відповідь на JSON
 
         const container = document.getElementById('places-container');
