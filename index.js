@@ -18,7 +18,7 @@ app.use(cors()); // дозвіл на запити з усіх доменів
 
 // основний маршрут для завантаження HTML
 app.get('/', (req, res) => {
-    res.status(200).sendFile(__dirname + '/public/index.html');
+    res.status(200).sendFile(__dirname + 'public', 'index.html');
 });
 
 
