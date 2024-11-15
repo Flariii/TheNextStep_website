@@ -4,7 +4,7 @@ async function loadPosts() {
 
     if (!type) {
         console.log('No type specified in the URL');
-        alert('No type specified in the URL');
+        // alert('No type specified in the URL');
         return;
     }
 
@@ -24,14 +24,14 @@ async function loadPosts() {
             : 'Location: Not available';
 
             card.innerHTML = `
-                <div class="card">
+                <div class="card d-flex flex-column h-100">
                     <img src="${post.photo_url}" class="card-img-top" alt="${post.name}">
-                    <div class="card-body">
+                    <div class="card-body flex-grow-1">
                         <h4 class="card-title fw-bold">${post.name}</h4>
                         <p class="card-text">Address: ${post.address}</p>
                         <p class="card-text">Rating: ${post.rating}</p>
-                        <a class="btn btn-success mt-2 px-4 py-2" href="#map">Go to map</a>
                     </div>
+                    <a class="btn btn-success mt-2 mb-4 px-4 py-2" href="#map">Go to map</a>
                 </div>
             `;
             
