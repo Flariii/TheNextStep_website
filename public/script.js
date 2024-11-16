@@ -9,8 +9,16 @@ async function loadPosts() {
     }
 
     try {
+        console.log("Fetching data from API...");
         const response = await fetch(`https://thenextstepapi.onrender.com/posts/${type}`); 
-        const posts = await response.json();  // Перетворюємо відповідь на JSON
+        
+        console.log(`Response status: ${response.status}`);
+        if (!response.ok) {
+            throw new Error(`API error: ${response.status} - ${response.statusText}`);
+        }
+
+        const posts = await response.json();  // conver answer to json
+        console.log("Fetched posts:", posts);
 
         const container = document.getElementById('places-container');
         container.innerHTML = '';
@@ -39,7 +47,7 @@ async function loadPosts() {
         });
     }
     catch (error) {
-        console.error('------> Error with loading posts in webpage', error.message);
+        console.error('Error with loading posts in webpage', error.message);
     }
 }
 

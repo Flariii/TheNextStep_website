@@ -15,14 +15,16 @@
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0 m-0">
                 <div class="container fs-5 p-0">
                     <!-- logo -->
-                    <div class="navbar-brand d-flex align-items-center ps-4">
-                        <img src="./public/images/green_logo.png" alt="Логотип" class="d-inline-block align-text-top me-4" style="width: 70px;">
-                        <span class="fs-2 text-sm-center">TheNextStep</span>
+                    <div class="navbar-brand d-flex align-items-center ps-3 m-0">
+                        <img src="./public/images/green_logo.png" alt="Логотип" class="d-block align-items-center me-2" style="width: 70px;">
+                        <div class="logo-slogan d-flex flex-column justify-content-center">
+                            <span class="fs-1 text-sm-center">TheNextStep</span>
+                            <span class="text-slogan">Find your next favourite spot</span>
+                        </div>
                     </div>
-        
                     <!-- mobile menu button -->
-                    <div class="button-container pe-4">
-                        <button class="navbar-toggler" 
+                    <div class="button-container pe-3">
+                        <button class="navbar-toggler px-2" 
                             type="button" 
                             data-bs-toggle="collapse" 
                             data-bs-target="#navbar" 
@@ -57,10 +59,64 @@
     
         <main class="main flex-grow-1">
             <div class="container mt-5">
-                <h1 class="text-center mb-4">Fetched places</h1>
+                <h1 class="text-center my-4">Places to Visit</h1>
                 <div id="places-container" class="row">
-                    <!-- Картки з постами будуть додані сюди за допомогою JavaScript -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card d-flex flex-column h-100">
+                            <div class="card-img-top placeholder-glow">
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                                <div class="placeholder-title mt-2"></div>
+                                <div class="placeholder-subtext">
+                                    <div class="subtext mt-2" style="width: 50%;"></div>
+                                    <div class="subtext mt-2" style="width: 60%;"></div>
+                                    <div class="subtext mt-2" style="width: 35%;"></div>
+                                    <div class="subtext mt-2" style="width: 70%;"></div>
+                                    <div class="subtext mt-2" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <a class="btn btn-success placeholder-btn disabled mt-2 mb-4 px-4 py-2"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card d-flex flex-column h-100">
+                            <div class="card-img-top placeholder-glow">
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                                <div class="placeholder-title mt-2"></div>
+                                <div class="placeholder-subtext">
+                                    <div class="subtext mt-2" style="width: 50%;"></div>
+                                    <div class="subtext mt-2" style="width: 60%;"></div>
+                                    <div class="subtext mt-2" style="width: 35%;"></div>
+                                    <div class="subtext mt-2" style="width: 70%;"></div>
+                                    <div class="subtext mt-2" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <a class="btn btn-success placeholder-btn disabled mt-2 mb-4 px-4 py-2"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card d-flex flex-column h-100">
+                            <div class="card-img-top placeholder-glow">
+                                <div class="placeholder-img"></div>
+                            </div>
+                            <div class="card-body flex-grow-1">
+                                <div class="placeholder-title mt-2"></div>
+                                <div class="placeholder-subtext">
+                                    <div class="subtext mt-2" style="width: 50%;"></div>
+                                    <div class="subtext mt-2" style="width: 60%;"></div>
+                                    <div class="subtext mt-2" style="width: 35%;"></div>
+                                    <div class="subtext mt-2" style="width: 70%;"></div>
+                                    <div class="subtext mt-2" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <a class="btn btn-success placeholder-btn disabled mt-2 mb-4 px-4 py-2"></a>
+                        </div>
+                    </div>
                 </div>
+                
 
                 <!-- slider navigation buttons -->
                 <!-- <button class="carousel-control-prev" type="button" data-bs-target="#card-carousel" data-bs-slide="prev">

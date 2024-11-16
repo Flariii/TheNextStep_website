@@ -10,6 +10,27 @@ body, html {
     overflow-x: hidden;
 }
 
+.text-slogan {
+    letter-spacing: 1px;
+    color: #39e891b3;
+    text-transform: uppercase;
+    font-size: 0.65rem; 
+    width: 100%;
+    text-align: center; 
+}
+
+@media (max-width: 768px) {
+    .text-slogan {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-slogan {
+        font-size: 0.5rem; 
+    }
+}
+
 .header-navbar {
     margin-bottom: 70px;
 }
@@ -84,6 +105,34 @@ body, html {
     border-radius: 25px;
     margin: 0 auto;
 }
+
+/* placeholder content */
+.placeholder-img {
+    background-color: #e0e0e0;
+    width: 100%; 
+    min-height: 250px; 
+    height: 250px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.placeholder-title {
+    background-color: #e0e0e0;
+    height: 30px;
+    width: 80%;
+    margin: 0px 0px 30px;
+}
+
+.placeholder-subtext .subtext {
+    background-color: #e0e0e0;
+    height: 15px;
+    width: 100%;
+}
+
+.placeholder-btn {
+    height: 40px;
+}
+/* end placeholder content*/
 
 .carousel-control-prev-icon, 
 .carousel-control-next-icon {
