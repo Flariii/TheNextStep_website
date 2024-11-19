@@ -132,6 +132,54 @@ body, html {
 .placeholder-btn {
     height: 40px;
 }
+
+/* shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* placeholder styles with shimmer */
+.placeholder-title, .placeholder-subtext .subtext {
+    background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f5f5f5 50%,
+        #e0e0e0 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* shimmer animation for button */
+@keyframes greenShimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* Placeholder button with green shimmer */
+.placeholder-btn {
+    background: linear-gradient(
+        90deg,
+        #27935db3 25%,
+        #39e891b3 50%,
+        #27935db3 75%
+    );
+    background-size: 200% 100%;
+    animation: greenShimmer 2s infinite;
+    border: none;
+    color: white; /* Optional: For text color */
+    text-align: center;
+}
+
 /* end placeholder content*/
 
 .carousel-control-prev-icon, 
@@ -150,6 +198,11 @@ body, html {
         display: flex;
         flex-direction: column; 
     }
+}
+
+#map {
+    width: 100%;
+    height: 350px;
 }
 
 .footer {
