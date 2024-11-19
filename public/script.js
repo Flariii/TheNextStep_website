@@ -10,33 +10,37 @@ async function loadPosts() {
 
     try {
         console.log("Fetching data from API...");
-        const response = await fetch(`https://thenextstepapi.onrender.com/posts/${type}`); 
+        const response = await fetch(`https://thenextstep-api.onrender.com/posts/${type}`);
         
         console.log(`Response status: ${response.status}`);
         if (!response.ok) {
             throw new Error(`API error: ${response.status} - ${response.statusText}`);
         }
 
-        const posts = await response.json();  // conver answer to json
-        console.log("Fetched posts:", posts);
+        const places = await response.json();  // conver answer to json
+        console.log("Fetched posts:", places);
 
         const container = document.getElementById('places-container');
         container.innerHTML = '';
         
-        posts.forEach(post => {
+        places.forEach(place => {
             const card = document.createElement('div');
             card.classList.add('col-md-4', 'mb-4');
 
+            let placePhoto = place.photo_url ? place.photo_url : './public/images/placeholder.png';
+            let status = place.is_open === true ? 'Open now! ✅' : 'This place keeps us guessing.. 🤔'
+
             card.innerHTML = `
                 <div class="card d-flex flex-column h-100">
-                    <img src="${post.photo_url}" class="card-img-top" alt="${post.name}">
+                    <img src="${placePhoto}" class="card-img-top" alt="${place.name}">
                     <div class="card-body flex-grow-1">
-                        <h4 class="card-title fw-bold">${post.name}</h4>
-                        <p class="card-text">Address: ${post.address}</p>
-                        <p class="card-text">Rating: ${post.rating}</p>
+                        <h4 class="card-title fw-bold">${place.name}</h4>
+                        <p class="mt-4 card-text">Address: ${place.address}</p>
+                        <p class="card-text">Status: ${status}</p>
+                        <p class="card-text">Rating: ${place.rating} ⭐</p>
                     </div>
-                    <a class="btn btn-success mt-2 mb-4 px-4 py-2" 
-                        onclick="showOnMap(${post.location.lat}, ${post.location.lng})" 
+                    <a class="btn btn-success fs-5 mt-2 mb-4 px-4 py-2" 
+                        onclick="showOnMap(${place.location.lat}, ${place.location.lng})" 
                         href="#map">
                         Go to map
                     </a>
