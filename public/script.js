@@ -114,3 +114,15 @@ async function initMap() {
 
 initMap();
 //#endregion
+
+document.addEventListener('click', function (event) {
+    const navbar = document.getElementById('navbar');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    if (!navbar.contains(event.target) && !navbarToggler.contains(event.target)) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbar);
+        if (bsCollapse) {
+            bsCollapse.hide();
+        }
+    }
+});
